@@ -205,7 +205,7 @@ const Projects: React.FC = () => {
                   className={`group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg transition-all duration-500 ease-out transform ${
                     projectsVisible
                       ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-10"
+                      : "opacity-100 translate-y-0 md:opacity-0 md:translate-y-10"
                   } hover:shadow-2xl hover:-translate-y-2`}
                   style={{
                     transitionDelay: projectsVisible

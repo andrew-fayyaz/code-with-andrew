@@ -121,6 +121,7 @@ const Contact: React.FC = () => {
                         </p>
                         <a
                           href={info.href}
+                          aria-label={`Contact via ${info.label}`}
                           className="text-gray-900 dark:text-white font-medium hover:text-blue-500 transition-colors duration-300"
                         >
                           {info.value}
@@ -161,6 +162,7 @@ const Contact: React.FC = () => {
                             href={social.href}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label={`Connect via ${social.label}`}
                             className="text-gray-900 dark:text-white font-medium hover:text-blue-500 transition-colors duration-300 text-sm"
                           >
                             {social.value}

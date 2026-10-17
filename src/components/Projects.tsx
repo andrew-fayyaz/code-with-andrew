@@ -308,6 +308,7 @@ const Projects: React.FC = () => {
                   href={selectedProject.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Open project externally"
                   className="flex items-center gap-2 px-3 py-1.5 bg-white/20 hover:bg-white/30 rounded-full transition-colors duration-200 text-white text-sm font-medium"
                 >
                   <ExternalLink className="w-4 h-4" />

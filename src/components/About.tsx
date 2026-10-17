@@ -191,6 +191,7 @@ const About: React.FC = () => {
                     href="https://www.linkedin.com/in/andrew-fayyaz"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit LinkedIn profile"
                     className="p-3 rounded-full bg-blue-100 dark:bg-blue-900/30 hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors duration-300"
                   >
                     <Linkedin className="w-5 h-5 text-blue-500" />
@@ -199,6 +200,7 @@ const About: React.FC = () => {
                     href="https://github.com/andrew-fayyaz"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit GitHub profile"
                     className="p-3 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
                   >
                     <Github className="w-5 h-5 text-gray-600 dark:text-gray-300" />

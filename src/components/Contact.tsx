@@ -231,6 +231,7 @@ const Contact: React.FC = () => {
 
                   <button
                     type="submit"
+                    aria-label="Send message"
                     className="w-full bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg transition-colors duration-300 font-medium flex items-center justify-center space-x-2"
                   >
                     <Send className="w-5 h-5" />

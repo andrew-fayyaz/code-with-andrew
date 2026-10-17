@@ -224,6 +224,7 @@ const Projects: React.FC = () => {
                       <div className="flex space-x-4">
                         <button
                           onClick={() => handlePreviewClick(project)}
+                          aria-label="Preview project"
                           className="p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors duration-300"
                           disabled={!project.url}
                         >
@@ -231,6 +232,7 @@ const Projects: React.FC = () => {
                         </button>
                         <button
                           onClick={handleGithubClick}
+                          aria-label="View github repository"
                           className="p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors duration-300"
                         >
                           <Github className="w-5 h-5 text-white" />
@@ -240,6 +242,7 @@ const Projects: React.FC = () => {
                             href={project.url}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="View project externally"
                             className="p-3 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors duration-300"
                           >
                             <ExternalLink className="w-5 h-5 text-white" />
@@ -312,6 +315,7 @@ const Projects: React.FC = () => {
                 </a>
                 <button
                   onClick={() => setIsModalOpen(false)}
+                  aria-label="Close preview modal"
                   className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors duration-200"
                 >
                   <X className="w-5 h-5 text-white" />

@@ -207,6 +207,7 @@ const About: React.FC = () => {
 
                 <button
                   onClick={handleDownloadCV}
+                  aria-label="Download CV"
                   className="inline-flex items-center space-x-3 bg-blue-500 hover:bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-colors duration-300"
                 >
                   <Download className="w-5 h-5" />

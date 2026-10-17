@@ -48,6 +48,7 @@ const Navigation: React.FC<NavigationProps> = ({
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
+                  aria-label={`Navigate to ${item.label}`}
                   className={`relative px-3 py-2 text-sm lg:text-base font-medium transition-colors duration-300 ${
                     activeSection === item.id
                       ? "text-blue-500"
@@ -65,6 +66,7 @@ const Navigation: React.FC<NavigationProps> = ({
             <div className="flex items-center space-x-2 lg:space-x-3">
               <button
                 onClick={toggleTheme}
+                aria-label="Toggle theme"
                 className="p-2 lg:p-2.5 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
               >
                 {theme === "dark" ? (
@@ -77,6 +79,7 @@ const Navigation: React.FC<NavigationProps> = ({
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label="Toggle menu"
                 className="md:hidden p-2 lg:p-2.5 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
               >
                 {isMenuOpen ? (
@@ -100,6 +103,7 @@ const Navigation: React.FC<NavigationProps> = ({
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
+              aria-label={`Navigate to ${item.label}`}
               className={`text-xl font-medium transition-all duration-500 ${
                 activeSection === item.id
                   ? "text-blue-500"

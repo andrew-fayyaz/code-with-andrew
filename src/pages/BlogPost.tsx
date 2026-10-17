@@ -1,20 +1,20 @@
-
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { Calendar, Clock, ArrowLeft, User, ArrowRight } from 'lucide-react';
-import Navigation from '../components/Navigation';
+import { ArrowLeft, ArrowRight, Calendar, Clock, User } from "lucide-react";
+import React from "react";
+import { Link, useParams } from "react-router-dom";
+import Navigation from "../components/Navigation";
 
 const BlogPost: React.FC = () => {
   const { slug } = useParams();
-  
+
   const posts = {
-    'building-scalable-mern-applications': {
+    "building-scalable-mern-applications": {
       title: "Building Scalable MERN Applications",
       date: "2024-01-15",
       readTime: "8 min read",
       category: "Development",
-      author: "Qamar Abbas",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop",
+      author: "Andrew Fayyaz",
+      image:
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop",
       content: `
         <div class="mb-8">
           <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=300&fit=crop" alt="Code on monitor" class="w-full h-64 object-cover rounded-lg mb-4" />
@@ -151,15 +151,16 @@ const BlogPost: React.FC = () => {
         </div>
         
         <p>Remember: Premature optimization is the root of all evil, but strategic optimization based on real metrics is essential for success. Start simple, measure impact, and scale intelligently.</p>
-      `
+      `,
     },
-    'modern-react-patterns-hooks': {
+    "modern-react-patterns-hooks": {
       title: "Modern React Patterns & Hooks",
       date: "2024-01-10",
       readTime: "6 min read",
       category: "React",
-      author: "Qamar Abbas",
-      image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop",
+      author: "Andrew Fayyaz",
+      image:
+        "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&h=400&fit=crop",
       content: `
         <div class="mb-8">
           <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=300&fit=crop" alt="React development" class="w-full h-64 object-cover rounded-lg mb-4" />
@@ -343,15 +344,16 @@ const BlogPost: React.FC = () => {
         </div>
         
         <p>Remember: React isn't just a library—it's a mindset that encourages building user interfaces that are both powerful and maintainable. Keep learning, keep experimenting, and most importantly, keep building amazing experiences for your users! 🎉</p>
-      `
+      `,
     },
-    'database-optimization-strategies': {
+    "database-optimization-strategies": {
       title: "Database Optimization Strategies",
       date: "2024-01-05",
       readTime: "10 min read",
       category: "Backend",
-      author: "Qamar Abbas",
-      image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&h=400&fit=crop",
+      author: "Andrew Fayyaz",
+      image:
+        "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&h=400&fit=crop",
       content: `
         <div class="mb-8">
           <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&h=300&fit=crop" alt="Database servers" class="w-full h-64 object-cover rounded-lg mb-4" />
@@ -657,8 +659,8 @@ const BlogPost: React.FC = () => {
         <p>Remember: <em>Premature optimization is the root of all evil</em>, but strategic optimization based on real performance metrics is essential for scalable applications. Start with the basics, measure impact, and scale intelligently.</p>
         
         <p>The database is the heart of your application—treat it with the respect it deserves, and it will serve you well! 💪</p>
-      `
-    }
+      `,
+    },
   };
 
   const post = posts[slug as keyof typeof posts];
@@ -667,8 +669,12 @@ const BlogPost: React.FC = () => {
     return (
       <div className="min-h-screen bg-white dark:bg-gray-900 pt-20">
         <div className="container mx-auto px-6 py-20 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Post Not Found</h1>
-          <Link to="/#blog" className="text-blue-500 hover:text-blue-600">← Back to Blog</Link>
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Post Not Found
+          </h1>
+          <Link to="/#blog" className="text-blue-500 hover:text-blue-600">
+            ← Back to Blog
+          </Link>
         </div>
       </div>
     );
@@ -677,28 +683,28 @@ const BlogPost: React.FC = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <Navigation activeSection="blog" setActiveSection={() => {}} />
-      
+
       <article className="pt-20">
         {/* Hero Section */}
         <div className="bg-gray-50 dark:bg-gray-800 py-16">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
-              <Link 
-                to="/#blog" 
+              <Link
+                to="/#blog"
                 className="inline-flex items-center text-blue-500 hover:text-blue-600 mb-8 transition-colors duration-300"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Blog
               </Link>
-              
+
               <div className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium inline-block mb-6">
                 {post.category}
               </div>
-              
+
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
                 {post.title}
               </h1>
-              
+
               <div className="flex items-center text-gray-600 dark:text-gray-300 space-x-6">
                 <div className="flex items-center space-x-2">
                   <User className="w-4 h-4" />
@@ -722,24 +728,24 @@ const BlogPost: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <div className="mb-12">
-                <img 
-                  src={post.image} 
+                <img
+                  src={post.image}
                   alt={post.title}
                   className="w-full h-64 md:h-96 object-cover rounded-2xl"
                 />
               </div>
-              
-              <div 
+
+              <div
                 className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-strong:text-gray-900 dark:prose-strong:text-white prose-ul:text-gray-700 dark:prose-ul:text-gray-300 prose-ol:text-gray-700 dark:prose-ol:text-gray-300"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
-              
+
               <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
                 <div className="text-center">
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
                     Enjoyed this article? Let's connect and discuss more!
                   </p>
-                  <Link 
+                  <Link
                     to="/#contact"
                     className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full transition-colors duration-300 font-medium inline-flex items-center space-x-2"
                   >

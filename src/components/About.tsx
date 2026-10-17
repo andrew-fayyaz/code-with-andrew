@@ -114,7 +114,7 @@ const About: React.FC = () => {
                 <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-800 dark:to-gray-700 p-2">
                   <div className="w-full h-full rounded-full overflow-hidden shadow-2xl">
                     <img
-                      src="/andrew-fayyaz.jpg"
+                      src="/andrew-fayyaz.webp"
                       alt="Andrew Fayyaz - Software Engineer"
                       className="w-full h-full object-cover object-top"
                     />
